@@ -1,14 +1,13 @@
 Rails.application.routes.draw do
+  resources :users
+  resources :usergambles
+  resources :coin_flips
   root 'static_pages#home'
 
-  get 'static_pages/help'
+  get 'help' => 'static_pages#help'
 
-  get 'static_pages/about'
+  get 'gamble' => 'static_pages#gamble'
 
-  get 'static_pages/gamble'
-
-  get 'static_pages/home'
-
-  get 'static_pages/help'
+  get 'about' => 'static_pages#about'
 
 end

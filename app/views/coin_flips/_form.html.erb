@@ -1,0 +1,21 @@
+<%= form_for(@coin_flip) do |f| %>
+  <% if @coin_flip.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@coin_flip.errors.count, "error") %> prohibited this coin_flip from being saved:</h2>
+
+      <ul>
+      <% @coin_flip.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

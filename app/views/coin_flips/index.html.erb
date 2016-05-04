@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Coin Flips</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @coin_flips.each do |coin_flip| %>
+      <tr>
+        <td><%= coin_flip.name %></td>
+        <td><%= link_to 'Show', coin_flip %></td>
+        <td><%= link_to 'Edit', edit_coin_flip_path(coin_flip) %></td>
+        <td><%= link_to 'Destroy', coin_flip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Coin flip', new_coin_flip_path %>

@@ -10,4 +10,7 @@ class StaticPagesController < ApplicationController
 
   def gamble
   end
+
+  
+
 end

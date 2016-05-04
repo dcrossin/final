@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Part no:</strong>
+  <%= @usergamble.part_no %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @usergamble.description %>
+</p>
+
+<p>
+  <strong>Qty:</strong>
+  <%= @usergamble.qty %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @usergamble.price %>
+</p>
+
+<%= link_to 'Edit', edit_usergamble_path(@usergamble) %> |
+<%= link_to 'Back', usergambles_path %>

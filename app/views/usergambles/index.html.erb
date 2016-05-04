@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Usergambles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Part no</th>
+      <th>Description</th>
+      <th>Qty</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @usergambles.each do |usergamble| %>
+      <tr>
+        <td><%= usergamble.part_no %></td>
+        <td><%= usergamble.description %></td>
+        <td><%= usergamble.qty %></td>
+        <td><%= usergamble.price %></td>
+        <td><%= link_to 'Show', usergamble %></td>
+        <td><%= link_to 'Edit', edit_usergamble_path(usergamble) %></td>
+        <td><%= link_to 'Destroy', usergamble, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Usergamble', new_usergamble_path %>
