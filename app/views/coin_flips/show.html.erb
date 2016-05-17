@@ -1,9 +1,5 @@
-<p id="notice"><%= notice %></p>
+<h1>Winner</h1>
 
-<p>
-  <strong>Name:</strong>
-  <%= @coin_flip.name %>
-</p>
+<%= render 'results' %>
 
-<%= link_to 'Edit', edit_coin_flip_path(@coin_flip) %> |
 <%= link_to 'Back', coin_flips_path %>
